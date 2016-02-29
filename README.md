@@ -1,4 +1,4 @@
-# Potato Front End task
+# Potato Front End Task
 
 
 ## Install
