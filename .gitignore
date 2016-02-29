@@ -1,0 +1,11 @@
+# IDE files
+*.iml
+.idea
+
+# Codebase
+dist
+build
+
+# Node
+node_modules
+npm-debug.log
