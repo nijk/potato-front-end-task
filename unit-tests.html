@@ -1,8 +1,10 @@
 <html>
     <head>
-        <title>Potato Front End Task</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
+        <title>Tests: Potato Front End Task</title>
+        <link rel="stylesheet" href="node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+        <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+        <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+        <script src="node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
 
         <script src="node_modules/es6-shim/es6-shim.min.js"></script>
         <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
@@ -11,8 +13,10 @@
         <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
         <script src="node_modules/systemjs/dist/system.src.js"></script>
         <script src="node_modules/rxjs/bundles/Rx.js"></script>
-        <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
 
+        <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    </head>
+    <body>
         <script>
             System.config({
                 packages: {
@@ -22,10 +26,7 @@
                     }
                 }
             });
-            System.import('app/main').then(null, console.error.bind(console));
+            System.import('app/app.component.spec').then(window.onload, console.error.bind(console));
         </script>
-    </head>
-    <body>
-        <app>Loading...</app>
     </body>
 </html>

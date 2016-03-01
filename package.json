@@ -1,8 +1,11 @@
 {
   "name": "potato-front-end-task",
+  "description": "Consume a public JSON API Feed and display the resulting data",
+  "repository": "git@github.com:nijk/potato-front-end-task.git",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\"",
+    "test": "lite-server --open=unit-tests.html",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
@@ -21,8 +24,10 @@
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
+    "jasmine-core": "2.4.1",
+    "jasmine-matchers": "^0.2.3",
     "lite-server": "^2.1.0",
     "typescript": "^1.8.2",
-    "typings":"^0.6.8"
+    "typings": "^0.6.8"
   }
 }
