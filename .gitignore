@@ -3,8 +3,9 @@
 .idea
 
 # Codebase
-dist
-build
+app/*.js
+app/*.js.map
+typings/*
 
 # Node
 node_modules
