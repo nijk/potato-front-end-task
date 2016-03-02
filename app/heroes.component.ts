@@ -1,5 +1,5 @@
 /**
- * Created by nijk on 29/02/2016.
+ * Created by nijk on 02/03/2016.
  */
 
 import { Component, OnInit } from 'angular2/core';
@@ -16,16 +16,8 @@ import { HeroService } from './hero.service';
     directives: [ HeroDetailComponent ]
 })
 
-@RouteConfig([
-    {
-        path: '/:id',
-        name: 'Detail',
-        component: HeroDetailComponent
-    }
-])
-
 export class HeroesComponent implements OnInit {
-    title = 'Flickr Public Feed';
+    subTitle = 'My Heroes';
     heroes: Hero[];
     selectedHero: Hero;
 
@@ -43,7 +35,7 @@ export class HeroesComponent implements OnInit {
     }
 
     gotoDetail(hero: Hero) {
-        let link = ['HeroDetail', { id: hero.id }];
+        let link = ['Detail', { id: hero.id }];
         this._router.navigate(link);
     }
 }

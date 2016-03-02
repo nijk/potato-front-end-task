@@ -1,5 +1,5 @@
 /**
- * Created by nijk on 29/02/2016.
+ * Created by nijk on 02/03/2016.
  */
 
 import { Component } from 'angular2/core';
@@ -9,35 +9,29 @@ import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService } from './hero.service';
 
+@RouteConfig([
+    {
+        path: '/',
+        name: 'Heroes',
+        component: HeroesComponent,
+        useAsDefault: true
+    },
+    {
+        path: '/detail/:id',
+        name: 'Detail',
+        component: HeroDetailComponent
+    }
+])
+
 @Component({
     selector: 'app',
-    template: `
-        <h1>{{title}}</h1>
-        <nav>
-            <a [routerLink]="['Heroes']">Home</a>
-        </nav>
-        <heroes></heroes>
-        <router-outlet></router-outlet>
-    `,
+    templateUrl: 'app/app.component.html',
     directives: [ ROUTER_DIRECTIVES ],
     providers: [
         ROUTER_PROVIDERS,
         HeroService
     ]
 })
-
-@RouteConfig([
-    {
-        path: '/',
-        name: 'Heroes',
-        component: HeroesComponent
-    },
-    {
-        path: '/detail/...',
-        name: 'Detail',
-        component: HeroDetailComponent
-    }
-])
 
 export class AppComponent {
     title = 'Flickr Public Feed';
