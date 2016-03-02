@@ -1,5 +1,5 @@
 /**
- * Created by nijk on 01/03/2016.
+ * Created by nijk on 02/03/2016.
  */
 
 import {HEROES} from './mock-heroes';
