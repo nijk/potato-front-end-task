@@ -12,7 +12,7 @@ describe('AppComponent', () => {
         component = new AppComponent();
     });
 
-    it('has value Hello World', () => {
-        expect(component.title).toEqual('Hello World');
+    it('has title value', () => {
+        expect(component.title).toEqual('Flickr Public Feed');
     });
 });
