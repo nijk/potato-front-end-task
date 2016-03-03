@@ -3,7 +3,7 @@
  */
 
 import { Component, OnInit } from 'angular2/core';
-import { Router, RouteConfig } from 'angular2/router';
+import { Router, RouteParams } from 'angular2/router';
 
 import { FeedItem } from './feed-item';
 import { FeedDetailComponent } from './feed-detail.component';
@@ -17,13 +17,12 @@ import { FeedService } from './feed.service';
 })
 
 export class FeedListComponent implements OnInit {
-    subTitle = 'My Feed';
     feedItems: FeedItem[];
-    selectedItem: FeedItem;
 
     constructor(
         private _router: Router,
-        private _feedService: FeedService) {
+        private _feedService: FeedService,
+        private _routeParams: RouteParams) {
     }
 
     getFeed() {

@@ -3,7 +3,7 @@
  */
 
 import { Component, OnInit } from 'angular2/core';
-import { RouteParams, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { RouteParams } from 'angular2/router';
 
 import { FeedItem } from './feed-item';
 import { FeedService } from './feed.service';
@@ -11,8 +11,7 @@ import { FeedService } from './feed.service';
 @Component({
     selector: 'feed-detail',
     templateUrl: 'app/feed/feed-detail.component.html',
-    inputs: ['feedItem'],
-    directives: [ ROUTER_DIRECTIVES ]
+    inputs: ['feedItem']
 })
 
 export class FeedDetailComponent implements OnInit {
