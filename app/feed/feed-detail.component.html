@@ -1,11 +1,11 @@
 <div *ngIf="feedItem">
-    <h2>{{feedItem.name}} details!</h2>
+    <h2>{{feedItem.title}}</h2>
     <nav>
         <button (click)="goBack()">Back</button>
     </nav>
     <div><label>id: </label>{{feedItem.id}}</div>
     <div>
         <label>name: </label>
-        <input [(ngModel)]="feedItem.name" placeholder="name"/>
+        <input [(ngModel)]="feedItem.title" placeholder="name"/>
     </div>
 </div>

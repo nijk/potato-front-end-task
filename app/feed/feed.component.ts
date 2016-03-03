@@ -4,14 +4,19 @@
 
 import { Component } from 'angular2/core';
 import { RouteConfig, RouterOutlet } from 'angular2/router';
-import { FeedListComponent }   from './feed-list.component';
+import { HTTP_PROVIDERS } from 'angular2/http';
+
+import { FeedListComponent } from './feed-list.component';
 import { FeedDetailComponent } from './feed-detail.component';
-import { FeedService }         from './feed.service';
+import { FeedService } from './feed.service';
 
 @Component({
     templateUrl:  './app/feed/feed.component.html',
     directives: [ RouterOutlet ],
-    providers:  [ FeedService ]
+    providers:  [
+        HTTP_PROVIDERS,
+        FeedService
+    ]
 })
 
 @RouteConfig([

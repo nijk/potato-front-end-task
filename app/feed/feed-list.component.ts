@@ -17,16 +17,21 @@ import { FeedService } from './feed.service';
 })
 
 export class FeedListComponent implements OnInit {
-    feedItems: FeedItem[];
-
     constructor(
         private _router: Router,
         private _feedService: FeedService,
         private _routeParams: RouteParams) {
     }
 
+    feedItems: FeedItem[];
+    errorMessage: string;
+
+
     getFeed() {
-        this._feedService.getFeed().then(feed => this.feedItems = feed);
+        this._feedService.getFeed().subscribe(
+            feed => this.feedItems = feed,
+            error => this.errorMessage = <any>error
+        );
     }
 
     ngOnInit() {

@@ -4,5 +4,5 @@
 
 export interface FeedItem {
     id: number;
-    name: string;
+    title: string;
 }
