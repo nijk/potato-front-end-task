@@ -9,7 +9,7 @@ import { FeedListComponent } from './feed/feed-list.component';
 import { FeedDetailComponent } from './feed/feed-detail.component';
 import { FeedService } from './feed/feed.service';
 
-/*@RouteConfig([
+@RouteConfig([
     {
         path: '/',
         name: 'FeedList',
@@ -21,7 +21,7 @@ import { FeedService } from './feed/feed.service';
         name: 'FeedDetail',
         component: FeedDetailComponent
     }
-])*/
+])
 
 @Component({
     selector: 'app',
