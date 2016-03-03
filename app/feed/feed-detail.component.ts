@@ -5,28 +5,28 @@
 import { Component, OnInit } from 'angular2/core';
 import { RouteParams, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { FeedItem } from './feed-item';
+import { FeedService } from './feed.service';
 
 @Component({
-    selector: 'hero-detail',
-    templateUrl: 'app/heroes-detail.component.html',
-    inputs: ['hero'],
+    selector: 'feed-detail',
+    templateUrl: 'app/feed/feed-detail.component.html',
+    inputs: ['feedItem'],
     directives: [ ROUTER_DIRECTIVES ]
 })
 
-export class HeroDetailComponent implements OnInit {
-    hero: Hero;
+export class FeedDetailComponent implements OnInit {
+    feedItem: FeedItem;
 
     constructor(
-        private _heroService: HeroService,
+        private _feedService: FeedService,
         private _routeParams: RouteParams) {
     }
 
     ngOnInit() {
         let id = +this._routeParams.get('id');
-        this._heroService.getHero(id)
-            .then(hero => this.hero = hero);
+        this._feedService.getFeedItem(id)
+            .then(feedItem => this.feedItem = feedItem);
     }
 
     goBack() {

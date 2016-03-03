@@ -5,23 +5,23 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
-import { HeroesComponent } from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroService } from './hero.service';
+import { FeedListComponent } from './feed/feed-list.component';
+import { FeedDetailComponent } from './feed/feed-detail.component';
+import { FeedService } from './feed/feed.service';
 
-@RouteConfig([
+/*@RouteConfig([
     {
         path: '/',
-        name: 'Heroes',
-        component: HeroesComponent,
+        name: 'FeedList',
+        component: FeedListComponent,
         useAsDefault: true
     },
     {
-        path: '/detail/:id',
-        name: 'Detail',
-        component: HeroDetailComponent
+        path: '/feed/:id',
+        name: 'FeedDetail',
+        component: FeedDetailComponent
     }
-])
+])*/
 
 @Component({
     selector: 'app',
@@ -29,7 +29,7 @@ import { HeroService } from './hero.service';
     directives: [ ROUTER_DIRECTIVES ],
     providers: [
         ROUTER_PROVIDERS,
-        HeroService
+        FeedService
     ]
 })
 

@@ -2,9 +2,9 @@
  * Created by nijk on 02/03/2016.
  */
 
-import {Hero} from './hero';
+import { FeedItem } from '../feed/feed-item';
 
-export var HEROES: Hero[] = [
+export var FEED: FeedItem[] = [
     {"id": 11, "name": "Mr. Nice"},
     {"id": 12, "name": "Narco"},
     {"id": 13, "name": "Bombasto"},

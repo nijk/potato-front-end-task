@@ -1,0 +1,12 @@
+<div *ngIf="feedItem">
+    <h2>{{feedItem.name}} details!</h2>
+    <nav>
+        <button (click)="goBack()">Back</button>
+    </nav>
+    <div><label>id: </label>{{feedItem.id}}</div>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="feedItem.name" placeholder="name"/>
+    </div>
+</div>
+<router-outlet></router-outlet>

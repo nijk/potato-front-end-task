@@ -1,0 +1,7 @@
+<h2>{{subTitle}}</h2>
+<ul class="feed-list">
+    <li *ngFor="#feedItem of feedItems"
+        (click)="gotoDetail(feedItem)">
+        <span class="badge">{{feedItem.id}}</span> {{feedItem.name}}
+    </li>
+</ul>

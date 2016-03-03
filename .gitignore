@@ -2,11 +2,22 @@
 *.iml
 .idea
 
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
 # Codebase
-app/*.js
-app/*.js.map
+*.js
+*.js.map
 typings/*
 
-# Node
+# Dependency directory
 node_modules
-npm-debug.log
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
