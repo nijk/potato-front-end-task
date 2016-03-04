@@ -4,18 +4,18 @@
 
 import { Component } from 'angular2/core';
 import { RouteConfig, RouterOutlet } from 'angular2/router';
-import { HTTP_PROVIDERS } from 'angular2/http';
+import { JSONP_PROVIDERS } from 'angular2/http';
 
 import { FeedListComponent } from './feed-list.component';
 import { FeedDetailComponent } from './feed-detail.component';
-import { FeedService } from './feed.service';
+import { FlickrService } from './flickr.service';
 
 @Component({
     templateUrl:  './app/feed/feed.component.html',
     directives: [ RouterOutlet ],
     providers:  [
-        HTTP_PROVIDERS,
-        FeedService
+        JSONP_PROVIDERS,
+        FlickrService
     ]
 })
 

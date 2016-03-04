@@ -6,7 +6,7 @@ import { Component, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
 
 import { FeedItem } from './feed-item';
-import { FeedService } from './feed.service';
+import { FlickrService } from './flickr.service';
 
 @Component({
     selector: 'feed-detail',
@@ -18,7 +18,7 @@ export class FeedDetailComponent implements OnInit {
     feedItem: FeedItem;
 
     constructor(
-        private _feedService: FeedService,
+        private _feedService: FlickrService,
         private _routeParams: RouteParams) {
     }
 

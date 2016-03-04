@@ -8,7 +8,7 @@ import { RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
 import { FeedComponent } from './feed/feed.component';
 import { FeedListComponent } from './feed/feed-list.component';
 import { FeedDetailComponent } from './feed/feed-detail.component';
-import { FeedService } from './feed/feed.service';
+import { FlickrService } from './feed/flickr.service';
 
 @RouteConfig([
     {
@@ -23,7 +23,7 @@ import { FeedService } from './feed/feed.service';
     selector: 'app',
     template: '<router-outlet></router-outlet>',
     directives: [ ROUTER_DIRECTIVES ],
-    providers: [ FeedService ]
+    providers: [ FlickrService ]
 })
 
 export class AppComponent {  }

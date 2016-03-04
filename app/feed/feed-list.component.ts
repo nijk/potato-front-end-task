@@ -5,27 +5,29 @@
 import { Component, OnInit } from 'angular2/core';
 import { Router, RouteParams } from 'angular2/router';
 
+import { FriendlyDatePipe } from '../pipes/date.pipe';
+
 import { FeedItem } from './feed-item';
 import { FeedDetailComponent } from './feed-detail.component';
-import { FeedService } from './feed.service';
+import { FlickrService } from './flickr.service';
 
 @Component({
     selector: 'feed-list',
     templateUrl: 'app/feed/feed-list.component.html',
     styleUrls:  ['app/feed/feed-list.component.css'],
-    directives: [ FeedDetailComponent ]
+    directives: [ FeedDetailComponent ],
+    pipes: [ FriendlyDatePipe ]
 })
 
 export class FeedListComponent implements OnInit {
     constructor(
         private _router: Router,
-        private _feedService: FeedService,
+        private _feedService: FlickrService,
         private _routeParams: RouteParams) {
     }
 
     feedItems: FeedItem[];
     errorMessage: string;
-
 
     getFeed() {
         this._feedService.getFeed().subscribe(

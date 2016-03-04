@@ -1,6 +1,11 @@
 <ul class="feed-list">
-    <li *ngFor="#feedItem of feedItems"
-        (click)="gotoDetail(feedItem)">
-        <span class="badge">{{feedItem.id}}</span> {{feedItem.title}}
+    <li *ngFor="#feedItem of feedItems">
+        <h2 class="feed-list__title" (click)="gotoDetail(feedItem)">{{feedItem.title}}</h2>
+        <figure class="feed-list__fig" (click)="gotoDetail(feedItem)">
+            <img src="{{feedItem.media.m}}" alt="{{feedItem.title}}"/>
+        </figure>
+        <h3 class="feed-list__author"><a href="https://www.flickr.com/people/{{feedItem.author_id}}">{{feedItem.author}}</a></h3>
+        <p class="feed-list__published">Published: {{feedItem.published | friendlyDate }} at {{feedItem.published | date:'H:mm'}}</p>
+        <p class="feed-list__view-original"><a href="{{feedItem.link}}">View on Flickr</a></p>
     </li>
 </ul>
