@@ -11,7 +11,7 @@ import { FeedDetailComponent } from './feed-detail.component';
 import { FlickrService } from './flickr.service';
 
 @Component({
-    templateUrl:  './app/feed/feed.component.html',
+    template:  require('./feed.component.html'),
     directives: [ RouterOutlet ],
     providers:  [
         JSONP_PROVIDERS,

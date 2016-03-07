@@ -13,8 +13,8 @@ import { FlickrService } from './flickr.service';
 
 @Component({
     selector: 'feed-list',
-    templateUrl: 'app/feed/feed-list.component.html',
-    styleUrls:  ['app/feed/feed-list.component.css'],
+    template: require('./feed-list.component.html'),
+    styles:  [ require('./feed-list.component.css') ],
     directives: [ FeedDetailComponent ],
     pipes: [ FriendlyDatePipe ]
 })

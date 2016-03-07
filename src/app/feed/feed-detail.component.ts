@@ -10,7 +10,7 @@ import { FlickrService } from './flickr.service';
 
 @Component({
     selector: 'feed-detail',
-    templateUrl: 'app/feed/feed-detail.component.html',
+    template: require('./feed-detail.component.html'),
     inputs: ['feedItem']
 })
 
@@ -24,8 +24,8 @@ export class FeedDetailComponent implements OnInit {
 
     ngOnInit() {
         let id = +this._routeParams.get('id');
-        this._feedService.getFeedItem(id)
-            .then(feedItem => this.feedItem = feedItem);
+        /*this._feedService.getFeedItem(id)
+            .then(feedItem => this.feedItem = feedItem);*/
     }
 
     goBack() {

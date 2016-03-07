@@ -3,8 +3,7 @@
  */
 
 import {Pipe, PipeTransform} from 'angular2/core';
-
-declare var moment: any;
+import * as moment from 'moment';
 
 /*
  * Creates a friendly date format
