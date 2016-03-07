@@ -19,5 +19,8 @@ typings/*
 # Dependency directory
 node_modules
 
+# Distribution
+dist/*
+
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
