@@ -26,4 +26,7 @@ import { FlickrService } from './feed/flickr.service';
     providers: [ FlickrService ]
 })
 
-export class AppComponent {  }
+export class AppComponent {
+    constructor() {
+    }
+}
