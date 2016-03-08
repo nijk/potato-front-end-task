@@ -1,0 +1,5 @@
+.sass-cache
+*.config.scss
+skeleton.*
+skeleton_template.css
+*.html
