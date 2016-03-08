@@ -14,4 +14,4 @@ Visit [http://localhost:3000/](http://localhost:3000/) in a browser
 [Trello board for managing the task](https://trello.com/b/Q1PtidFs/potato-front-end-task)
 
 ### License
-This project is released under the [MIT license](https://github.com/nijk/potato-front-end-task/LICENSE).
+This project is released under the [MIT license](https://github.com/nijk/potato-front-end-task/blob/master/LICENSE).
