@@ -1,0 +1,37 @@
+.selected {
+    background-color: #CFD8DC !important;
+    color: #fff;
+}
+
+.feed-list {
+    margin: 0 0 2em;
+
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        background-color: #eee;
+        margin: 0.5em;
+        padding: 1rem;
+        border-radius: 4px;
+    }
+
+    li.selected:hover {
+        background-color: #BBD8DC !important;
+        color: white;
+    }
+
+    li:hover {
+        color: #607D8B;
+        background-color: #DDD;
+    }
+
+    figure {
+        width: auto;
+        cursor: pointer;
+    }
+
+    .text {
+        position: relative;
+    }
+}
