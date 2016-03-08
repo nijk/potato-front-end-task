@@ -8,13 +8,12 @@
   },
   "license": "ISC",
   "scripts": {
-    "start": "npm run watch:dev && npm run server:dev",
+    "start": "npm run server:dev & npm run watch:dev",
     "server": "npm run server:dev:hmr",
     "server:dev": "webpack-dev-server --inline --progress --profile --colors --watch --display-error-details --display-cached  --content-base dist/",
     "server:dev:hmr": "npm run server:dev -- --hot",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "lite": "lite-server dist/index.html",
     "watch:dev": "webpack --watch --profile --colors --display-error-details --display-cached",
     "typings": "typings",
     "postinstall": "typings install"
