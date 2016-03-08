@@ -12,8 +12,8 @@ pids
 *.seed
 
 # Codebase
-*.js
-*.js.map
+src/**/*.js
+src/**/*.js.map
 typings/*
 
 # Dependency directory
