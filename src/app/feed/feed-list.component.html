@@ -9,3 +9,7 @@
         <p class="feed-list__view-original"><a href="{{feedItem.link}}">View on Flickr</a></p>
     </li>
 </ul>
+
+<div *ngIf="errorMessage">
+    <p>Sorry there was an error fetching this feed: {{errorMessage}}</p>
+</div>

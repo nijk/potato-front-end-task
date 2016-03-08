@@ -19,8 +19,8 @@ import { FriendlyDatePipe } from '../pipes/date.pipe';
 
 export class FeedDetailComponent implements OnInit {
 
-    feedItem: FeedItem;
-    errorMessage: string;
+    private feedItem: FeedItem;
+    private errorMessage: string;
 
     constructor(
         private _feedService: FlickrService,

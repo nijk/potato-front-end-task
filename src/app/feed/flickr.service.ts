@@ -11,6 +11,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/filter';
+import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class FlickrService {
@@ -69,7 +70,11 @@ export class FlickrService {
     }
 
     public handleError (error: Response) {
-        console.error(error);
-        return Observable.throw(error.json().error || 'Server error');
+        const defaultErrorMessage: Object = { error: 'Server error' };
+        const errorMessage = (error.json() || defaultErrorMessage).error;
+
+        console.error(errorMessage);
+
+        return Observable.throw(new Error(errorMessage));
     }
 }
