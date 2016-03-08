@@ -22,8 +22,7 @@ import { FlickrService } from './flickr.service';
 export class FeedListComponent implements OnInit {
     constructor(
         private _router: Router,
-        private _feedService: FlickrService,
-        private _routeParams: RouteParams) {
+        private _feedService: FlickrService) {
     }
 
     feedItems: FeedItem[];

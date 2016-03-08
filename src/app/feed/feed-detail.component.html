@@ -1,7 +1,7 @@
 <div *ngIf="feedItem">
     <h2 class="feed-detail__title" >{{feedItem.title}}</h2>
     <nav>
-        <button (click)="goBack()">Back</button>
+        <button (click)="goToList()">Back</button>
     </nav>
 
     <h3 class="feed-detail__author"><a href="https://www.flickr.com/people/{{feedItem.author_id}}">{{feedItem.author}}</a></h3>
