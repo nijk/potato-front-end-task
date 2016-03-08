@@ -8,7 +8,7 @@
   },
   "license": "ISC",
   "scripts": {
-    "start": "npm run server:dev & npm run watch:dev",
+    "start": "npm run server:dev:hmr & npm run watch:dev",
     "server": "npm run server:dev:hmr",
     "server:dev": "webpack-dev-server --inline --progress --profile --colors --watch --display-error-details --display-cached  --content-base dist/",
     "server:dev:hmr": "npm run server:dev -- --hot",
