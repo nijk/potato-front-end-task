@@ -11,8 +11,12 @@ if ('production' === process.env.ENV) {
 
     // RxJS
     // In production manually include the operators you use
+    require('rxjs/add/operator/catch');
+    require('rxjs/add/operator/do');
+    require('rxjs/add/operator/filter');
     require('rxjs/add/operator/map');
     require('rxjs/add/operator/mergeMap');
+    require('rxjs/add/observable/throw');
 
 } else {
     // Development
@@ -25,8 +29,12 @@ if ('production' === process.env.ENV) {
     // to include every operator uncomment
     // require('rxjs/Rx');
 
+    require('rxjs/add/operator/catch');
+    require('rxjs/add/operator/do');
+    require('rxjs/add/operator/filter');
     require('rxjs/add/operator/map');
     require('rxjs/add/operator/mergeMap');
+    require('rxjs/add/observable/throw');
 
 }
 

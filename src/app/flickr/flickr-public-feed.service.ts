@@ -7,12 +7,6 @@ import { Jsonp, Response, URLSearchParams } from 'angular2/http';
 import { FeedItem } from '../feed/feed-item';
 import { Observable } from 'rxjs/Observable';
 
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/observable/throw';
-
 @Injectable()
 export class FlickrPublicFeedService {
     constructor(private jsonp: Jsonp){
