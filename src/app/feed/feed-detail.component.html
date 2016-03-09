@@ -10,9 +10,9 @@
         <img src="{{feedItem.media.m}}" alt="{{feedItem.title}}"/>
     </figure>
     <div *ngIf="feedItem.description" [innerHTML]="feedItem.description" class="feed-detail__description"></div>
-    <div *ngIf="feedItem.tags">
+    <div *ngIf="feedItem.tags" class="feed-tags">
         <p>Tags:</p>
-        <ul class="feed-tags">
+        <ul class="feed-tags__list">
             <li *ngFor="#tag of feedItem.tags">{{tag}}</li>
         </ul>
     </div>
