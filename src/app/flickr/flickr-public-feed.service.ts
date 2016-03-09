@@ -11,8 +11,10 @@ import { Observable } from 'rxjs/Observable';
 export class FlickrPublicFeedService {
     constructor(private jsonp: Jsonp){
     }
+    
+    public title: string = 'Flickr Public';
 
-    private feedUrl: string = 'https://api.flickr.com/services/feeds/photos_public.gne';
+    private _feedUrl: string = 'https://api.flickr.com/services/feeds/photos_public.gne';
 
     private _feed: FeedItem[] = [];
 
@@ -58,7 +60,7 @@ export class FlickrPublicFeedService {
         params.set('format', 'json');
         params.set('jsoncallback', 'JSONP_CALLBACK');
 
-        return this.jsonp.get(this.feedUrl, { search: params })
+        return this.jsonp.get(this._feedUrl, { search: params })
             .map(res => res.json().items)
             // @fixme: find a better way to do this in RxJS
             .map(items => this._feed = items.map((item, i) => this._transformItems(item, i)))

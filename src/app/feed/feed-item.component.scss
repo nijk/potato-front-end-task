@@ -1,0 +1,42 @@
+$color-grey: #eee;
+$color-grey-shade: #ddd;
+
+.feed-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.feed-item__fig {
+    display: inline-block;
+    margin: 0;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.feed-item__copy {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 1rem;
+}
+
+.feed-item__title {
+    width: 100%;
+}
+
+.feed-item__author {
+}
+
+.feed-item__published {
+
+}
+
+.feed-item__view-original {
+}

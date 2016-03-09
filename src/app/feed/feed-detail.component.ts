@@ -13,7 +13,10 @@ import { FriendlyDatePipe } from '../pipes/date.pipe';
 @Component({
     selector: 'feed-detail',
     template: require('./feed-detail.component.html'),
-    styles: [ require('./feed-detail.component.scss') ],
+    styles: [
+        require('./feed-detail.component.scss'),
+        require('./feed-item.component.scss')
+    ],
     pipes: [ FriendlyDatePipe ]
 })
 

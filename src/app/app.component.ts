@@ -20,7 +20,7 @@ import { FlickrPublicFeedService } from './flickr/flickr-public-feed.service.ts'
 
 @Component({
     selector: 'app',
-    template: '<router-outlet></router-outlet>',
+    template: '<div class="container"><div class="row"><router-outlet></router-outlet></div></div>',
     styles: [ require('./styles/skeleton/skeleton.scss') ],
     encapsulation: ViewEncapsulation.None,
     directives: [ ROUTER_DIRECTIVES ],

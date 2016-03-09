@@ -1,19 +1,29 @@
-<div *ngIf="feedItem">
-    <h2 class="feed-detail__title" >{{feedItem.title}}</h2>
-    <nav>
-        <button (click)="goToList()">Back</button>
-    </nav>
+<div *ngIf="feedItem" class="row">
+    <div class="feed-detail feed-item">
+        <div class="feed-detail__title-bar">
+            <h2 class="feed-item__title" ><a href="{{feedItem.link}}">{{feedItem.title}}</a></h2>
+            <nav>
+                <button (click)="goToList()">Back</button>
+            </nav>
+        </div>
 
-    <h3 class="feed-detail__author"><a href="https://www.flickr.com/people/{{feedItem.author_id}}">{{feedItem.author}}</a></h3>
-    <p class="feed-detail__published">Published: {{feedItem.published | friendlyDate }} at {{feedItem.published | date:'H:mm'}}</p>
-    <figure class="feed-detail__fig">
-        <img src="{{feedItem.media.m}}" alt="{{feedItem.title}}"/>
-    </figure>
-    <div *ngIf="feedItem.description" [innerHTML]="feedItem.description" class="feed-detail__description"></div>
-    <div *ngIf="feedItem.tags" class="feed-tags">
-        <p>Tags:</p>
-        <ul class="feed-tags__list">
-            <li *ngFor="#tag of feedItem.tags">{{tag}}</li>
-        </ul>
+        <div class="feed-detail__meta-data">
+            <h3 class="feed-item__author"><a href="https://www.flickr.com/people/{{feedItem.author_id}}">{{feedItem.author}}</a></h3>
+            <h3 class="feed-item__published">Published: {{feedItem.published | friendlyDate }} at {{feedItem.published | date:'H:mm'}}</h3>
+        </div>
+
+        <figure class="feed-item__fig">
+            <img src="{{feedItem.media.m}}" alt="{{feedItem.title}}"/>
+        </figure>
+
+        <div class="feed-item__copy">
+            <div *ngIf="feedItem.description" [innerHTML]="feedItem.description" class="feed-item__description"></div>
+            <div *ngIf="feedItem.tags" class="feed-tags">
+                <p class="feed-tags__list__title">Tags:</p>
+                <ul class="feed-tags__list">
+                    <li *ngFor="#tag of feedItem.tags" class="feed-tags__list__item">{{tag}}</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>

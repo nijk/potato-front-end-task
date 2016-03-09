@@ -14,7 +14,10 @@ import { FlickrPublicFeedService } from '../flickr/flickr-public-feed.service.ts
 @Component({
     selector: 'feed-list',
     template: require('./feed-list.component.html'),
-    styles:  [ require('./feed-list.component.scss') ],
+    styles:  [
+        require('./feed-list.component.scss'),
+        require('./feed-item.component.scss')
+    ],
     directives: [ FeedDetailComponent ],
     pipes: [ FriendlyDatePipe ]
 })

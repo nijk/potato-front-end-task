@@ -11,6 +11,7 @@ import { FeedDetailComponent } from './feed-detail.component';
 import { FlickrPublicFeedService } from '../flickr/flickr-public-feed.service.ts';
 
 @Component({
+    selector: 'feed',
     template:  require('./feed.component.html'),
     directives: [ RouterOutlet ],
     providers:  [
@@ -34,5 +35,8 @@ import { FlickrPublicFeedService } from '../flickr/flickr-public-feed.service.ts
 ])
 
 export class FeedComponent {
-    title = 'Flickr Public Feed';
+    constructor(private _feedService: FlickrPublicFeedService){
+    }
+
+    title = `${this._feedService.title} Feed`;
 }
