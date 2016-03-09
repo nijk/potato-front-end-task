@@ -1,23 +1,35 @@
+@import 'feed.vars';
+
 .feed-detail__title-bar {
     display: flex;
     width: 100%;
+    padding: 1rem;
+
+    background-color: $background-title-bar;
 
     .feed-item__title {
-
+        font-size: 3rem;
+        margin: 0;
     }
 
-    nav {
-
+    button {
+        align-self: center;
+        margin: 0;
     }
 }
 
 .feed-detail__meta-data {
     display: flex;
     width: 100%;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+
+    background-color: $background-meta-data-bar;
 
     .feed-item__author,
     .feed-item__published {
-        font-size: 2.5rem
+        margin-bottom: 0;
+        font-size: 1.8rem
     }
 
     .feed-item__author {
@@ -27,23 +39,42 @@
     }
 }
 
-.feed-item__fig {
-    max-width: 40%;
-}
+.feed-detail {
+    .feed-item__fig {
+        min-width: 20%;
+        max-width: 40%;
+    }
 
-.feed-item__copy {
-    width: 60%;
-    justify-content: flex-end;
+    .feed-item__copy {
+        width: 60%;
+        padding: 1rem 0 1rem 2rem;
+        justify-content: flex-end;
+    }
+
+    .feed-item__description {
+        margin-bottom: auto;
+    }
 }
 
 .feed-tags {
-    ul, li, p {
-        display: inline;
+    display: flex;
+    margin-top: 2rem;
+
+    .feed-tags__list__title {
+        margin: 0.5rem 0 0 0;
     }
 }
 
 .feed-tags__list {
-    li {
-        padding: 1rem;
-    }
+    margin-bottom: -0.5rem;
+}
+
+.feed-tag {
+    display: inline-block;
+    margin: 0 0 0.5rem 0.5rem;
+    padding: 0.5rem;
+    color: $color-black;
+    background-color: $link-color;
+    border-radius: $border-radius;
+    word-break: break-all;
 }

@@ -2,9 +2,7 @@
     <div class="feed-detail feed-item">
         <div class="feed-detail__title-bar">
             <h2 class="feed-item__title" ><a href="{{feedItem.link}}">{{feedItem.title}}</a></h2>
-            <nav>
-                <button (click)="goToList()">Back</button>
-            </nav>
+            <button (click)="goToList()">Back</button>
         </div>
 
         <div class="feed-detail__meta-data">
@@ -21,7 +19,7 @@
             <div *ngIf="feedItem.tags" class="feed-tags">
                 <p class="feed-tags__list__title">Tags:</p>
                 <ul class="feed-tags__list">
-                    <li *ngFor="#tag of feedItem.tags" class="feed-tags__list__item">{{tag}}</li>
+                    <li *ngFor="#tag of feedItem.tags" class="feed-tags__list__item feed-tag">{{tag}}</li>
                 </ul>
             </div>
         </div>

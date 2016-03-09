@@ -5,9 +5,11 @@
         </figure>
         <div class="feed-item__copy">
             <h2 class="feed-item__title" (click)="gotoDetail(feedItem)">{{feedItem.title}}</h2>
-            <p class="feed-item__author"><a href="https://www.flickr.com/people/{{feedItem.author_id}}">{{feedItem.author}}</a></p>
-            <p class="feed-item__published">Published: {{feedItem.published | friendlyDate }} at {{feedItem.published | date:'H:mm'}}</p>
-            <p class="feed-item__view-original"><a href="{{feedItem.link}}">View on Flickr</a></p>
+            <div class="feed-item__meta-data">
+                <p class="feed-item__author"><a href="https://www.flickr.com/people/{{feedItem.author_id}}">{{feedItem.author}}</a></p>
+                <p class="feed-item__published">Published: {{feedItem.published | friendlyDate }} at {{feedItem.published | date:'H:mm'}}</p>
+                <p class="feed-item__view-original"><a href="{{feedItem.link}}">View on Flickr</a></p>
+            </div>
         </div>
     </li>
 </ul>
