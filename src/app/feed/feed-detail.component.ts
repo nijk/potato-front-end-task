@@ -6,7 +6,7 @@ import { Component, OnInit } from 'angular2/core';
 import { Router, RouteParams } from 'angular2/router';
 
 import { FeedItem } from './feed-item';
-import { FlickrService } from './flickr.service';
+import { FlickrPublicFeedService } from '../flickr/flickr-public-feed.service.ts';
 
 import { FriendlyDatePipe } from '../pipes/date.pipe';
 
@@ -19,7 +19,7 @@ import { FriendlyDatePipe } from '../pipes/date.pipe';
 export class FeedDetailComponent implements OnInit {
     constructor(
         private _router: Router,
-        private _feedService: FlickrService,
+        private _feedService: FlickrPublicFeedService,
         private _routeParams: RouteParams) {
     }
 

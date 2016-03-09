@@ -9,7 +9,7 @@ import { FriendlyDatePipe } from '../pipes/date.pipe';
 
 import { FeedItem } from './feed-item';
 import { FeedDetailComponent } from './feed-detail.component';
-import { FlickrService } from './flickr.service';
+import { FlickrPublicFeedService } from '../flickr/flickr-public-feed.service.ts';
 
 @Component({
     selector: 'feed-list',
@@ -22,7 +22,7 @@ import { FlickrService } from './flickr.service';
 export class FeedListComponent implements OnInit {
     constructor(
         private _router: Router,
-        private _feedService: FlickrService) {
+        private _feedService: FlickrPublicFeedService) {
     }
 
     feedItems: FeedItem[];
@@ -40,7 +40,6 @@ export class FeedListComponent implements OnInit {
     }
 
     gotoDetail(feedItem: FeedItem) {
-        let link = ['FeedDetail', { id: feedItem.id }];
-        this._router.navigate(link);
+        this._router.navigate(['FeedDetail', { id: feedItem.id }]);
     }
 }

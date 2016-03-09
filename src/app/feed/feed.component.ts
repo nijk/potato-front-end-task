@@ -8,14 +8,14 @@ import { JSONP_PROVIDERS } from 'angular2/http';
 
 import { FeedListComponent } from './feed-list.component';
 import { FeedDetailComponent } from './feed-detail.component';
-import { FlickrService } from './flickr.service';
+import { FlickrPublicFeedService } from '../flickr/flickr-public-feed.service.ts';
 
 @Component({
     template:  require('./feed.component.html'),
     directives: [ RouterOutlet ],
     providers:  [
         JSONP_PROVIDERS,
-        FlickrService
+        FlickrPublicFeedService
     ]
 })
 
