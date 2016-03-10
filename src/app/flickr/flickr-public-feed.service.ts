@@ -62,7 +62,6 @@ export class FlickrPublicFeedService {
 
         return this.jsonp.get(this._feedUrl, { search: params })
             .map(res => res.json().items)
-            // @fixme: find a better way to do this in RxJS
             .map(items => this._feed = items.map((item, i) => this._transformItems(item, i)))
             .catch(this._handleError);
     }
