@@ -171,7 +171,7 @@ input[type="button"] {
 	display: inline-block;
 	height: 38px;
 	padding: 0 relative(30px);
-	color: $button-color;
+	color: darken($button-color, 15%);
 	text-align: center;
 	font-size: relative(11px);
 	font-weight: $button-weight;
@@ -182,7 +182,7 @@ input[type="button"] {
 	white-space: nowrap;
 	background-color: transparent;
 	border-radius: $border-radius;
-	border: 1px solid $button-border-color;
+	border: 1px solid darken($button-border-color, 15%);
 	cursor: pointer;
 	box-sizing: border-box;
 	transition: padding 0.3s;
@@ -190,8 +190,8 @@ input[type="button"] {
 	&:hover,
 	&:focus {
 		padding: 0 relative(45px);
-		color: darken($button-color, 15%);
-		border-color: darken($button-border-color, 15%);
+		color: $button-color;
+		border-color: $button-border-color;
 		outline: 0;
 	}
 	&.button-primary {

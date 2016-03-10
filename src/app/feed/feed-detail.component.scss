@@ -1,7 +1,9 @@
+@import '../styles/mixins/flexbox-mixin';
 @import 'feed.vars';
 
 .feed-detail__title-bar {
-    display: flex;
+    @include flexbox;
+    @include justify-content(space-between);
     width: 100%;
     padding: 1rem;
 
@@ -13,13 +15,13 @@
     }
 
     button {
-        align-self: center;
+        @include align-self(center);
         margin: 0;
     }
 }
 
 .feed-detail__meta-data {
-    display: flex;
+    @include flexbox;
     width: 100%;
     margin-bottom: 2rem;
     padding: 0.5rem 1rem;
@@ -48,7 +50,7 @@
     .feed-item__copy {
         width: 60%;
         padding: 1rem 0 1rem 2rem;
-        justify-content: flex-end;
+        @include justify-content(flex-end);
     }
 
     .feed-item__description {
@@ -57,7 +59,7 @@
 }
 
 .feed-tags {
-    display: flex;
+    @include flexbox;
     margin-top: 2rem;
 
     .feed-tags__list__title {
@@ -66,11 +68,12 @@
 }
 
 .feed-tags__list {
+    width: 100%;
     margin-bottom: -0.5rem;
 }
 
 .feed-tag {
-    display: inline-block;
+    @include inline-flex;
     margin: 0 0 0.5rem 0.5rem;
     padding: 0.5rem;
     color: $color-black;

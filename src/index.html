@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title><%= webpackConfig.metadata.title %></title>
@@ -29,6 +30,8 @@
         <meta name="msapplication-config" content="/assets/icon/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <!-- end favicon -->
+
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en"></script>
 
         <!-- base url -->
         <base href="<%= webpackConfig.metadata.baseUrl %>">

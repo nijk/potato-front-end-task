@@ -1,8 +1,9 @@
+@import '../styles/mixins/flexbox-mixin';
 @import 'feed.vars';
 
 .feed-item {
-    display: flex;
-    flex-wrap: wrap;
+    @include flexbox;
+    @include flex-wrap(wrap);
 }
 
 .feed-item__fig {
@@ -18,13 +19,12 @@
 }
 
 .feed-item__copy {
-    display: flex;
-    flex-direction: column;
+    @include flexbox;
+    @include flex-direction(column);
 
     padding: 0 1rem;
 }
 
 .feed-item__title {
-    width: 100%;
     line-height: 1.5;
 }
