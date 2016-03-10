@@ -38,8 +38,6 @@
     "html-webpack-plugin": "^2.9.0",
     "ie-shim": "^0.1.0",
     "imports-loader": "^0.6.5",
-    "jasmine-core": "^2.4.1",
-    "jasmine-matchers": "^0.2.3",
     "json-loader": "^0.5.4",
     "node-sass": "^3.4.2",
     "raw-loader": "^0.5.1",
